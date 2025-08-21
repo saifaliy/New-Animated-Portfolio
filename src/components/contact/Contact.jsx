@@ -69,7 +69,7 @@ const Contact = () => {
             <input
               type="text"
               name="user_username"
-              placeholder="Saif Ali"
+              placeholder="Enter your name here "
               required
             />
           </motion.div>
@@ -79,7 +79,7 @@ const Contact = () => {
             <input
               type="email"
               name="user_email"
-              placeholder="mrsaifie.512@gmail.com"
+              placeholder="Enter your email here"
               required
             />
           </motion.div>
@@ -89,7 +89,7 @@ const Contact = () => {
             <textarea
               rows={10}
               name="user_message"
-              placeholder="Write your message..."
+              placeholder="Write your message here..."
               required
             ></textarea>
           </motion.div>
@@ -103,7 +103,7 @@ const Contact = () => {
           </motion.button>
 
           {success && (
-            <span style={{ color: "green" }}>✅ Your message has been sent!</span>
+            <span style={{ color: "green" }}>Your message has been sent!</span>
           )}
           {error && (
             <span style={{ color: "red" }}>
