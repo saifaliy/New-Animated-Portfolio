@@ -74,7 +74,7 @@ const Hero = () => {
             </motion.a>
             <motion.a
               variants={awardVariants}
-              href="YOUR_LINK_FOR_AWARD2"
+              href="https://drive.google.com/drive/folders/1hdJkauQrFy058ZjmvuNosnkqpqo2kaaI?dmr=1&ec=wgc-drive-globalnav-goto"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -82,7 +82,7 @@ const Hero = () => {
             </motion.a>
             <motion.a
               variants={awardVariants}
-              href="YOUR_LINK_FOR_AWARD3"
+              href="https://linktr.ee/saifieali"
               target="_blank"
               rel="noopener noreferrer"
             >
