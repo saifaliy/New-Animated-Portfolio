@@ -19,37 +19,18 @@
   align-items: center;
   justify-content: center;
   gap: 100px;
+  padding: 20px;
 }
 
-/* .pItem:nth-child(1) {
-  background: linear-gradient(to right, #12071f, #210b3a);
-}
-.pItem:nth-child(2) {
-  background: linear-gradient(to right, #210b3a, #27084a);
-}
-.pItem:nth-child(3) {
-  background: linear-gradient(to right, #27084a, #220345);
-}
-.pItem:nth-child(4) {
-  background: linear-gradient(to right, #220345, #2a0159);
-}
-.pItem:nth-child(5) {
-  background: linear-gradient(to right, #2a0159, #12071f);
-} */
-
-/* WE'LL NOT GIVE BACKGROUND COLOR TO THE FIRST AND LAST ITEMS (to keep scrolling effect consistent) */
 .pItem:nth-child(3) {
   background: linear-gradient(to right, transparent, #260622);
 }
-
 .pItem:nth-child(4) {
   background: linear-gradient(to right, #260622, #02222e);
 }
-
 .pItem:nth-child(5) {
   background: linear-gradient(to right, #02222e, #12071f);
 }
-
 .pItem:nth-child(6) {
   background: linear-gradient(to right, #12071f, transparent);
 }
@@ -58,14 +39,16 @@
   position: sticky;
   width: 80px;
   height: 80px;
-  left: 0;
+  left: 20px;
   bottom: 80%;
+  z-index: 10;
 }
 
 .pImg {
   width: 40%;
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .pImg img {
@@ -79,25 +62,35 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  color: #fff;
 }
 
 .pText h1 {
   font-size: 56px;
+  line-height: 1.2;
 }
 
 .pText p {
   font-weight: 300;
+  line-height: 1.6;
 }
 
 .pText button {
-  background-color: pink;
-  padding: 12px;
+  background-color: #dd4c62;
+  color: #fff;
+  padding: 12px 20px;
   border-radius: 10px;
   border: none;
   font-weight: 500;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+.pText button:hover {
+  background-color: #c13b52;
+}
+
+/* --------- RESPONSIVENESS --------- */
 @media (max-width: 1536px) {
   .pItem {
     gap: 50px;
@@ -113,22 +106,59 @@
 @media (max-width: 1024px) {
   .pItem {
     flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 40px 20px;
   }
 
   .pImg,
   .pText {
-    width: 80%;
+    width: 85%;
   }
 
   .pProgress {
     bottom: 100px;
-    left: 100%;
+    left: auto;
+    right: 20px;
   }
 }
 
 @media (max-width: 768px) {
+  .pText h1 {
+    font-size: 36px;
+  }
+
+  .pText p {
+    font-size: 14px;
+  }
+
   .pProgress {
     width: 50px;
     height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pItem {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .pImg,
+  .pText {
+    width: 95%;
+  }
+
+  .pText h1 {
+    font-size: 28px;
+  }
+
+  .pText p {
+    font-size: 13px;
+  }
+
+  .pText button {
+    width: 100%;
+    padding: 14px;
   }
 }
